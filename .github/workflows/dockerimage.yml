@@ -9,5 +9,5 @@ jobs:
       uses: HurricanKai/Publish-Docker-Github-Action@master
       with:
         name: comfortablynumb/golang-testing-template
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ secrets.GITHUB_DOCKER_USER }}
+        password: ${{ secrets.GITHUB_DOCKER_PASSWORD }}
