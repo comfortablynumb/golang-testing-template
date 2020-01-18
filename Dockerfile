@@ -1,4 +1,4 @@
-FROM golang:1.8
+FROM golang:1.13
 
 # TODO: Use a container to build this and just use binary
 
