@@ -1,5 +1,5 @@
 name: Publish Docker
-on: [push]
+on: [push, pull_request, create]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -8,7 +8,7 @@ jobs:
     - name: Publish to Registry
       uses: HurricanKai/Publish-Docker-Github-Action@master
       with:
-        name: docker.pkg.github.com/comfortablynumb/golang-testing-template/testing-image
+        name: docker.pkg.github.com/${{ github.repository }}/application
         username: ${{ secrets.GITHUB_DOCKER_USER }}
         password: ${{ secrets.GITHUB_DOCKER_PASSWORD }}
         registry: docker.pkg.github.com
